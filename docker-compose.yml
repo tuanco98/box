@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  prl-box-be-v2.1.2:
+    container_name: prl-box-be
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "$PORT:$PORT"
+    env_file: .env
+    restart: always
